@@ -10,5 +10,5 @@ export const getSuggestion = (): string => {
     "göra rent i badrummet",
   ];
 
-  return suggestions[Math.round(Math.random() * suggestions.length)];
+  return suggestions[Math.round(Math.random() * (suggestions.length - 1))];
 };
