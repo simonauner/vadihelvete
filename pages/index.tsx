@@ -19,7 +19,7 @@ const Home: NextPage<HomePageProps> = ({ suggestion }) => {
   const metaUrl = "https://vadihelvete.se";
 
   console.log(
-    "Hej! Kul att du är här! Nu måste du verkligen ha ingenting att göra om du t.o.m öppnar upp devtools för en sida som ger förslag på något riktigt att göra!"
+    "Hej! Kul att du är här! Nu måste du verkligen inte ha någonting att göra om du t.o.m öppnar upp devtools för en sida som ger förslag på något riktigt att göra!"
   );
   console.log(
     "Har du fler bra förslag på vad man kan göra? https://github.com/simonauner/vadihelvete"
