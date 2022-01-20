@@ -1,6 +1,6 @@
-import React, { FC, useState } from "react";
+import React, { FC } from 'react';
 
-import css from "./Button.module.css";
+import css from './Button.module.css';
 
 type ButtonProps = {
   onClick: () => void;

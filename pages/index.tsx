@@ -1,9 +1,8 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import { Button } from "../src/Button/Button";
-import { getSuggestion } from "../src/Suggestions";
-import styles from "../styles/Home.module.css";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import { Button } from '../src/Button/Button';
+import { getSuggestion } from '../src/Suggestions';
+import styles from '../styles/Home.module.css';
 
 type HomePageProps = {
   suggestion: string;
@@ -14,15 +13,15 @@ const Home: NextPage<HomePageProps> = ({ suggestion }) => {
     location.reload();
   };
 
-  const metaTitle = "Vad i helevete ska jag göra nu?";
-  const metaDescription = "Vet du inte riktigt vad du ska göra med ditt liv?";
-  const metaUrl = "https://vadihelvete.se";
+  const metaTitle = 'Vad i helevete ska jag göra nu?';
+  const metaDescription = 'Vet du inte riktigt vad du ska göra med ditt liv?';
+  const metaUrl = 'https://vadihelvete.se';
 
   console.log(
-    "Hej! Kul att du är här! Nu måste du verkligen inte ha någonting att göra om du t.o.m öppnar upp devtools för en sida som ger förslag på något riktigt att göra!"
+    'Hej! Kul att du är här! Nu måste du verkligen inte ha någonting att göra om du t.o.m öppnar upp devtools för en sida som ger förslag på något riktigt att göra!'
   );
   console.log(
-    "Har du fler bra förslag på vad man kan göra? https://github.com/simonauner/vadihelvete"
+    'Har du fler bra förslag på vad man kan göra? https://github.com/simonauner/vadihelvete'
   );
 
   return (
@@ -65,10 +64,9 @@ const Home: NextPage<HomePageProps> = ({ suggestion }) => {
   );
 };
 
-export async function getServerSideProps() {
+export const getServerSideProps = async () => {
   const suggestion = getSuggestion();
-
   return { props: { suggestion } };
-}
+};
 
 export default Home;
