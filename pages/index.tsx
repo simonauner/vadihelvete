@@ -18,6 +18,13 @@ const Home: NextPage<HomePageProps> = ({ suggestion }) => {
   const metaDescription = "Vet du inte riktigt vad du ska göra med ditt liv?";
   const metaUrl = "https://vadihelvete.se";
 
+  console.log(
+    "Hej! Kul att du är här! Nu måste du verkligen ha ingenting att göra om du t.o.m öppnar upp devtools för en sida som ger förslag på något riktigt att göra!"
+  );
+  console.log(
+    "Har du fler bra förslag på vad man kan göra? https://github.com/simonauner/vadihelvete"
+  );
+
   return (
     <div className={styles.container}>
       <Head>
@@ -54,15 +61,6 @@ const Home: NextPage<HomePageProps> = ({ suggestion }) => {
           </Button>
         </p>
       </main>
-
-      <footer className={styles.footer}>
-        <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   );
 };
