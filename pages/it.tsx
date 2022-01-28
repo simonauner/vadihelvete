@@ -7,11 +7,11 @@ type HomePageProps = {
 };
 
 const Home: NextPage<HomePageProps> = ({ suggestion }) => (
-  <Page suggestion={suggestion} />
+  <Page suggestion={suggestion} favicon="🖥️" />
 );
 
 export const getServerSideProps = async () => {
-  const suggestion = getSuggestion();
+  const suggestion = getSuggestion('it');
   return { props: { suggestion } };
 };
 
