@@ -27,7 +27,8 @@ const parseDay = (value: string | string[] | undefined) => {
 
 const LonPage = async ({ searchParams }: Props) => {
   const dayOfMonth = parseDay((await searchParams).dag);
-  const status = paydayStatus(stockholmDate(), dayOfMonth);
+  const today = stockholmDate();
+  const status = paydayStatus(today, dayOfMonth);
 
   return (
     <>
@@ -52,7 +53,7 @@ const LonPage = async ({ searchParams }: Props) => {
         {status.daysUntil > 0 && (
           <p className={styles.date}>{formatDate(status.next)}</p>
         )}
-        <p className={styles.comment}>{paydayComment(status)}</p>
+        <p className={styles.comment}>{paydayComment(status, today)}</p>
 
         <div className={styles.footer}>
           <PaydaySelect dayOfMonth={dayOfMonth} />
