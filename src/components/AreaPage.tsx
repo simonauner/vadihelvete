@@ -8,7 +8,7 @@ type AreaPageProps = {
   children: ReactNode;
 };
 
-/** Shared layout for the tool-like areas (väder, översätt, idag, …). */
+/** Shared layout for the tool-like areas (väder, listor, rum, …). */
 export const AreaPage = ({ title, intro, children }: AreaPageProps) => (
   <>
     <SiteHeader />

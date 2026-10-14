@@ -1,7 +1,6 @@
 import type { NextConfig } from 'next';
 
 const unicodeRoutes: Record<string, string> = {
-  '/översätt': '/oversatt',
   '/ha-på-mig': '/ha-pa-mig',
   '/bestäm': '/bestam',
 };

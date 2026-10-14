@@ -31,12 +31,6 @@ export const areas: Area[] = [
     description: 'Temadag, namnsdag och flaggdag. Med åsikter.',
   },
   {
-    href: '/oversatt',
-    emoji: '🗯️',
-    question: 'betyder det?',
-    description: 'LinkedIn-svammel och konsultsvenska på ren svenska.',
-  },
-  {
     href: '/lista',
     emoji: '🧽',
     question: 'är det min tur att diska?',
