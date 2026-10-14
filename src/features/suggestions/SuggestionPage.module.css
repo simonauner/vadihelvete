@@ -18,6 +18,11 @@
   text-wrap: balance;
 }
 
+.wide {
+  max-width: 24ch;
+  font-size: clamp(1.75rem, 5vw, 3.25rem);
+}
+
 .highlight {
   color: var(--accent);
 }
