@@ -15,7 +15,7 @@ export const AdviceCard = ({ advice, place }: AdviceCardProps) => {
   const { summary } = advice;
 
   return (
-    <section className={styles.card} aria-live="polite">
+    <section className={`${styles.card} ${styles.fadeUp}`}>
       <p className={styles.headline}>{advice.headline}</p>
       <ul className={styles.extras}>
         {advice.extras.map((extra) => (
