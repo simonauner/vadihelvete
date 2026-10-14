@@ -1,0 +1,37 @@
+src/app/fredag/opengraph-image.tsx
+  s_79e71990b30604::t_766f6814b5329c 1-21
+src/features/today/calendar.ts
+  s_79e71990b30604::t_766f6814b5329c 141-169
+src/features/friday/friday.test.ts
+  s_79e71990b30604::t_766f6814b5329c 1-56
+src/features/friday/FridayView.tsx
+  s_79e71990b30604::t_766f6814b5329c 1-38
+src/app/lon/page.tsx
+  s_79e71990b30604::t_4e61fd35d459e1 12
+src/features/friday/friday.ts
+  s_79e71990b30604::t_766f6814b5329c 1-67
+src/app/fredag/page.tsx
+  s_79e71990b30604::t_4e61fd35d459e1 6
+  s_79e71990b30604::t_766f6814b5329c 1-5,7-27
+src/features/friday/Friday.module.css
+  s_79e71990b30604::t_766f6814b5329c 1-30
+src/lib/areas.ts
+  s_79e71990b30604::t_766f6814b5329c 27-31
+  s_79e71990b30604::t_7c4e58d57d3e94 26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f3f570680d34d9edf02f2997c96faf6d54c00d19",
+  "prompts": {},
+  "sessions": {
+    "s_79e71990b30604": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4c2a93b2-cac7-4ba4-a9fc-56b6439b3b42",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Simon Aunér <simonauner@gmail.com>"
+    }
+  }
+}
