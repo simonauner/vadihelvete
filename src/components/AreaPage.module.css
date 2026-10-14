@@ -1,0 +1,19 @@
+.main {
+  width: 100%;
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 4rem;
+}
+
+.title {
+  margin: 0 0 1rem;
+  font-size: clamp(2.25rem, 8vw, 4rem);
+  line-height: 1;
+  text-wrap: balance;
+}
+
+.intro {
+  margin: 0 0 2rem;
+  color: var(--muted);
+  font-size: 1.125rem;
+}

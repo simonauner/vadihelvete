@@ -18,4 +18,10 @@ export const areas: Area[] = [
     question: 'ska jag koda?',
     description: 'För den som har tråkigt på jobbet.',
   },
+  {
+    href: '/oversatt',
+    emoji: '🗯️',
+    question: 'betyder det?',
+    description: 'LinkedIn-svammel och konsultsvenska på ren svenska.',
+  },
 ];
