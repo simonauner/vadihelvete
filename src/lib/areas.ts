@@ -52,6 +52,12 @@ export const areaGroups: AreaGroup[] = [
         question: 'ska jag koda?',
         description: 'För den som har tråkigt på jobbet.',
       },
+      {
+        href: '/fokus',
+        emoji: '⏱️',
+        question: 'gör jag på mobilen? Jobba!',
+        description: 'Arg pomodoro-timer. 25 minuter, sen paus.',
+      },
     ],
   },
   {
