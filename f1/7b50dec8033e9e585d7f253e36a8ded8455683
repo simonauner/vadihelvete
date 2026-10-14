@@ -1,0 +1,25 @@
+src/app/hemma/page.tsx
+  s_79e71990b30604::t_e256f030f3af1f 1-12
+src/lib/areas.ts
+  s_79e71990b30604::t_e256f030f3af1f 1-21
+src/app/page.tsx
+  s_79e71990b30604::t_e256f030f3af1f 1-3,5-9,11-32
+src/app/page.module.css
+  s_79e71990b30604::t_e256f030f3af1f 1-77
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f17b50dec8033e9e585d7f253e36a8ded8455683",
+  "prompts": {},
+  "sessions": {
+    "s_79e71990b30604": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4c2a93b2-cac7-4ba4-a9fc-56b6439b3b42",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Simon Aunér <simonauner@gmail.com>"
+    }
+  }
+}
