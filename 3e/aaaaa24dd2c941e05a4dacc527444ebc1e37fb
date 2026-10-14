@@ -1,0 +1,24 @@
+src/features/payday/payday.ts
+  s_7b3c6fffe5122c::t_d8d7b790026ba6 64-112,117-128,134-138
+  s_7b3c6fffe5122c::t_046c7494fa7376 113-116,130-133
+src/app/lon/page.tsx
+  s_7b3c6fffe5122c::t_d8d7b790026ba6 30-31,56
+src/features/payday/payday.test.ts
+  s_7b3c6fffe5122c::t_046c7494fa7376 2,71-72,74-100
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3eaaaaa24dd2c941e05a4dacc527444ebc1e37fb",
+  "prompts": {},
+  "sessions": {
+    "s_7b3c6fffe5122c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "42673a7e-57ba-4566-a1bf-d328408bc6a6",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Simon Aunér <simonauner@gmail.com>"
+    }
+  }
+}
