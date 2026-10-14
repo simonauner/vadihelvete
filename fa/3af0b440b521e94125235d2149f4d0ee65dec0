@@ -1,0 +1,30 @@
+src/lib/areas.ts
+  s_79e71990b30604::t_8084b86c9a46fd 55-60
+src/features/focus/Focus.module.css
+  s_79e71990b30604::t_8084b86c9a46fd 1-58
+src/features/focus/FocusTimer.tsx
+  s_79e71990b30604::t_8084b86c9a46fd 1-2,10-35,37-38,52-83,85-96,98-204,206-211
+  s_79e71990b30604::t_7b93deebf1d131 3-9,36,39-51,84,97,205
+src/features/focus/timer.test.ts
+  s_79e71990b30604::t_8084b86c9a46fd 1-23
+src/app/fokus/page.tsx
+  s_79e71990b30604::t_8084b86c9a46fd 1-19
+src/features/focus/timer.ts
+  s_79e71990b30604::t_8084b86c9a46fd 1-40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "fa3af0b440b521e94125235d2149f4d0ee65dec0",
+  "prompts": {},
+  "sessions": {
+    "s_79e71990b30604": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4c2a93b2-cac7-4ba4-a9fc-56b6439b3b42",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Simon Aunér <simonauner@gmail.com>"
+    }
+  }
+}
