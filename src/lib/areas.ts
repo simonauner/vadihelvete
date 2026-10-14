@@ -36,4 +36,16 @@ export const areas: Area[] = [
     question: 'betyder det?',
     description: 'LinkedIn-svammel och konsultsvenska på ren svenska.',
   },
+  {
+    href: '/lista',
+    emoji: '🧽',
+    question: 'är det min tur att diska?',
+    description: 'Delad sysslolista som skäller ut rätt person.',
+  },
+  {
+    href: '/bestam',
+    emoji: '🗳️',
+    question: 'ska vi göra?',
+    description: 'Rösta med gänget. Annars bestämmer jag.',
+  },
 ];
