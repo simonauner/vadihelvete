@@ -114,6 +114,21 @@ h3 {
   font-size: 1rem;
 }
 
+/* Our own chevron: the native arrow sits cramped against the rounded border. */
+select.input {
+  appearance: none;
+  padding-right: 2.75rem;
+  background-image:
+    linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position:
+    right 1.4rem center,
+    right 1rem center;
+  background-size: 0.4rem 0.4rem;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
