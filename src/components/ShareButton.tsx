@@ -5,9 +5,14 @@ import { useState } from 'react';
 type ShareButtonProps = {
   path: string;
   text: string;
+  label?: string;
 };
 
-export const ShareButton = ({ path, text }: ShareButtonProps) => {
+export const ShareButton = ({
+  path,
+  text,
+  label = 'Skicka till någon som behöver det',
+}: ShareButtonProps) => {
   const [copied, setCopied] = useState(false);
 
   const share = async () => {
@@ -30,7 +35,7 @@ export const ShareButton = ({ path, text }: ShareButtonProps) => {
 
   return (
     <button type="button" className="button" onClick={share}>
-      {copied ? 'Länken är kopierad!' : 'Skicka till någon som behöver det'}
+      {copied ? 'Länken är kopierad!' : label}
     </button>
   );
 };
