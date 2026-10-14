@@ -1,0 +1,29 @@
+src/features/answer/Oracle.tsx
+  s_79e71990b30604::t_d8ff8c19589729 1-59
+src/lib/areas.ts
+  s_79e71990b30604::t_d8ff8c19589729 66-71
+src/features/answer/Oracle.module.css
+  s_79e71990b30604::t_d8ff8c19589729 1-81
+src/features/answer/answers.ts
+  s_79e71990b30604::t_d8ff8c19589729 1-31
+src/features/answer/answers.test.ts
+  s_79e71990b30604::t_d8ff8c19589729 1-16
+src/app/svar/page.tsx
+  s_79e71990b30604::t_d8ff8c19589729 1-21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5ac0b4241a3aa5cd324921e902fc0f5e737b1f9b",
+  "prompts": {},
+  "sessions": {
+    "s_79e71990b30604": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4c2a93b2-cac7-4ba4-a9fc-56b6439b3b42",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Simon Aunér <simonauner@gmail.com>"
+    }
+  }
+}
