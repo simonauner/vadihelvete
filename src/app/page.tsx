@@ -51,6 +51,9 @@ const StartPage = () => (
     <footer className={styles.footer}>
       Har du en bättre idé? Gör en jävla{' '}
       <a href="https://github.com/simonauner/vadihelvete">pull request</a> då.
+      <a href="https://hackskaduha.se" className={styles.credit}>
+        Ett hittepå från Hack ska du ha AB. För i helvete.
+      </a>
     </footer>
   </main>
 );
