@@ -1,3 +1,4 @@
+import { ShareButton } from '@/components/ShareButton';
 import { SiteHeader } from '@/components/SiteHeader';
 import { markDone, startOver } from './actions';
 import { getSeen } from './seen';
@@ -22,11 +23,17 @@ export const SuggestionPage = async ({ category }: SuggestionPageProps) => {
               Du kan väl för i helvete{' '}
               <span className={styles.highlight}>{suggestion.text}</span>
             </h1>
-            <form action={markDone.bind(null, category, suggestion.index)}>
-              <button className="button button-primary" type="submit">
-                Det har jag ju för i helvete redan gjort
-              </button>
-            </form>
+            <div className={styles.actions}>
+              <form action={markDone.bind(null, category, suggestion.index)}>
+                <button className="button button-primary" type="submit">
+                  Det har jag ju för i helvete redan gjort
+                </button>
+              </form>
+              <ShareButton
+                path={`/${category}/${suggestion.index + 1}`}
+                text={`Du kan väl för i helvete ${suggestion.text}`}
+              />
+            </div>
           </>
         ) : (
           <>

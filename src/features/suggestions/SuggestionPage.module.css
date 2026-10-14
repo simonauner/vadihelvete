@@ -21,3 +21,16 @@
 .highlight {
   color: var(--accent);
 }
+
+.kicker {
+  margin: 0 0 -1.5rem;
+  color: var(--muted);
+  font-size: 1.125rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}

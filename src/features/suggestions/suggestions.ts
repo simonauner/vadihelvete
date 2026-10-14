@@ -1,5 +1,13 @@
 import type { SeenSuggestions, Suggestion, SuggestionCategory } from './types';
 
+export const categories: Record<
+  SuggestionCategory,
+  { title: string; emoji: string }
+> = {
+  hemma: { title: 'Vad i helvete ska jag göra hemma?', emoji: '🧹' },
+  it: { title: 'Vad i helvete ska jag koda?', emoji: '🖥️' },
+};
+
 export const suggestions: Record<SuggestionCategory, readonly string[]> = {
   hemma: [
     'städa ditt rum',
@@ -76,4 +84,17 @@ export const parseSeen = (value: string | undefined): SeenSuggestions => {
   } catch {
     return {};
   }
+};
+
+/** Shared links use 1-based numbers: /hemma/1 is the first suggestion. */
+export const suggestionByNumber = (
+  category: SuggestionCategory,
+  nr: string
+): Suggestion | undefined => {
+  if (!/^\d+$/.test(nr)) return undefined;
+
+  const index = Number(nr) - 1;
+  const text = suggestions[category][index];
+
+  return text ? { index, text } : undefined;
 };

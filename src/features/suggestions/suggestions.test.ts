@@ -3,6 +3,7 @@ import {
   markSeen,
   parseSeen,
   pickSuggestion,
+  suggestionByNumber,
   suggestions,
 } from './suggestions';
 
@@ -54,5 +55,21 @@ describe('pickSuggestion', () => {
 describe('markSeen', () => {
   it('adds an index once', () => {
     expect(markSeen(markSeen({}, 'it', 3), 'it', 3)).toEqual({ it: [3] });
+  });
+});
+
+describe('suggestionByNumber', () => {
+  it('maps 1-based numbers to suggestions', () => {
+    expect(suggestionByNumber('hemma', '1')).toEqual({
+      index: 0,
+      text: suggestions.hemma[0],
+    });
+  });
+
+  it('rejects numbers out of range or malformed', () => {
+    expect(suggestionByNumber('hemma', '0')).toBeUndefined();
+    expect(suggestionByNumber('hemma', '999')).toBeUndefined();
+    expect(suggestionByNumber('hemma', '1e1')).toBeUndefined();
+    expect(suggestionByNumber('hemma', 'constructor')).toBeUndefined();
   });
 });
