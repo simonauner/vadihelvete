@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { areas } from '@/lib/areas';
+import { areaGroups } from '@/lib/areas';
 import { QuestionTyper } from './QuestionTyper';
 import styles from './page.module.css';
 
@@ -22,21 +22,30 @@ const StartPage = () => (
       <h2 id="alla" className={styles.restTitle}>
         Orkar du inte vänta?
       </h2>
-      <ul className={styles.list}>
-        {areas.map((area) => (
-          <li key={area.href}>
-            <Link href={area.href} className={styles.item}>
-              <span className={styles.emoji} aria-hidden>
-                {area.emoji}
-              </span>
-              <span className={styles.text}>
-                <span className={styles.question}>…{area.question}</span>
-                <span className={styles.description}>{area.description}</span>
-              </span>
-            </Link>
-          </li>
+      {areaGroups
+        .filter((group) => group.areas.length)
+        .map((group) => (
+          <section key={group.title} className={styles.group}>
+            <h3 className={styles.groupTitle}>{group.title}</h3>
+            <ul className={styles.list}>
+              {group.areas.map((area) => (
+                <li key={area.href}>
+                  <Link href={area.href} className={styles.item}>
+                    <span className={styles.emoji} aria-hidden>
+                      {area.emoji}
+                    </span>
+                    <span className={styles.text}>
+                      <span className={styles.question}>…{area.question}</span>
+                      <span className={styles.description}>
+                        {area.description}
+                      </span>
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
         ))}
-      </ul>
     </section>
 
     <footer className={styles.footer}>

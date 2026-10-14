@@ -96,3 +96,74 @@ export const lastWeekday = (
   const last = weekdayIndex({ year, month, day: lastDay });
   return { year, month, day: lastDay - ((last - weekday + 7) % 7) };
 };
+
+export const daysBetween = (from: CalendarDate, to: CalendarDate) =>
+  Math.round((toUtc(to).getTime() - toUtc(from).getTime()) / 86_400_000);
+
+export const compareDates = (a: CalendarDate, b: CalendarDate) =>
+  daysBetween(b, a);
+
+/** Midsommardagen: the Saturday between 20 and 26 June. */
+const midsummerDay = (year: number): CalendarDate => {
+  const june20: CalendarDate = { year, month: 6, day: 20 };
+  return addDays(june20, (6 - weekdayIndex(june20) + 7) % 7);
+};
+
+/**
+ * Days when Swedish banks are closed besides weekends: public holidays
+ * plus midsommarafton, julafton and nyårsafton.
+ */
+export const bankHolidays = (year: number): CalendarDate[] => {
+  const easter = easterSunday(year);
+
+  return [
+    { year, month: 1, day: 1 },
+    { year, month: 1, day: 6 },
+    addDays(easter, -2),
+    addDays(easter, 1),
+    { year, month: 5, day: 1 },
+    addDays(easter, 39),
+    { year, month: 6, day: 6 },
+    addDays(midsummerDay(year), -1),
+    { year, month: 12, day: 24 },
+    { year, month: 12, day: 25 },
+    { year, month: 12, day: 26 },
+    { year, month: 12, day: 31 },
+  ];
+};
+
+export const isBankDay = (date: CalendarDate) => {
+  const weekday = weekdayIndex(date);
+  if (weekday === 0 || weekday === 6) return false;
+
+  return !bankHolidays(date.year).some((holiday) => isSameDate(holiday, date));
+};
+
+export type Clock = { weekday: number; secondsOfDay: number };
+
+/** Weekday (0 = Sunday) and seconds since midnight in Sweden. */
+export const stockholmClock = (now: Date = new Date()): Clock => {
+  const parts = Object.fromEntries(
+    new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'Europe/Stockholm',
+      weekday: 'short',
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+      hourCycle: 'h23',
+    })
+      .formatToParts(now)
+      .map(({ type, value }) => [type, value])
+  );
+  const weekday = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(
+    parts.weekday
+  );
+
+  return {
+    weekday,
+    secondsOfDay:
+      Number(parts.hour) * 3600 +
+      Number(parts.minute) * 60 +
+      Number(parts.second),
+  };
+};

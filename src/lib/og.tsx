@@ -25,7 +25,7 @@ export const ogImage = async ({
   emoji,
 }: OgImageProps) => {
   const length = headline.length + (highlight?.length ?? 0);
-  const fontSize = length > 70 ? 64 : length > 45 ? 76 : 92;
+  const fontSize = length > 120 ? 54 : length > 70 ? 64 : length > 45 ? 76 : 92;
 
   return new ImageResponse(
     <div

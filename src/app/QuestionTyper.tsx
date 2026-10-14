@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { areas } from '@/lib/areas';
+import { areaGroups } from '@/lib/areas';
 import styles from './page.module.css';
 
 const TYPE_MS = 55;
@@ -11,6 +11,8 @@ const HOLD_MS = 2200;
 const GAP_MS = 350;
 
 type Phase = 'holding' | 'erasing' | 'typing';
+
+const areas = areaGroups.flatMap((group) => group.areas);
 
 /**
  * Types each area's question after the headline, holds it, erases it and

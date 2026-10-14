@@ -3,6 +3,8 @@ import type { NextConfig } from 'next';
 const unicodeRoutes: Record<string, string> = {
   '/ha-på-mig': '/ha-pa-mig',
   '/bestäm': '/bestam',
+  '/lön': '/lon',
+  '/ursäkt': '/ursakt',
 };
 
 const nextConfig: NextConfig = {
