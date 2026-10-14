@@ -25,6 +25,12 @@ export const areas: Area[] = [
     description: 'SMHI:s prognos, fast med en åsikt.',
   },
   {
+    href: '/idag',
+    emoji: '📅',
+    question: 'är det för dag idag?',
+    description: 'Temadag, namnsdag och flaggdag. Med åsikter.',
+  },
+  {
     href: '/oversatt',
     emoji: '🗯️',
     question: 'betyder det?',
