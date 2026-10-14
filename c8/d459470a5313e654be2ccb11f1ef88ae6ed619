@@ -1,0 +1,38 @@
+next.config.ts
+  s_79e71990b30604::t_45250544bf11fd 6
+src/app/lon/page.tsx
+  s_79e71990b30604::t_45250544bf11fd 1-69
+src/app/lon/opengraph-image.tsx
+  s_79e71990b30604::t_45250544bf11fd 1-26
+src/features/payday/payday.test.ts
+  s_79e71990b30604::t_a8e2b9ffc8005d 13-22
+  s_79e71990b30604::t_f7a16ba4110793 1-12,23-75
+src/app/lon/page.module.css
+  s_79e71990b30604::t_45250544bf11fd 1-62
+src/features/today/calendar.ts
+  s_79e71990b30604::t_a8e2b9ffc8005d 106-110
+  s_79e71990b30604::t_f7a16ba4110793 99-105,111-140
+src/features/payday/PaydaySelect.tsx
+  s_79e71990b30604::t_45250544bf11fd 1-32
+  s_79e71990b30604::t_14fa7ede113acf 33-38
+src/lib/areas.ts
+  s_79e71990b30604::t_45250544bf11fd 26-31
+src/features/payday/payday.ts
+  s_79e71990b30604::t_f7a16ba4110793 1-74
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c8d459470a5313e654be2ccb11f1ef88ae6ed619",
+  "prompts": {},
+  "sessions": {
+    "s_79e71990b30604": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4c2a93b2-cac7-4ba4-a9fc-56b6439b3b42",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Simon Aunér <simonauner@gmail.com>"
+    }
+  }
+}
