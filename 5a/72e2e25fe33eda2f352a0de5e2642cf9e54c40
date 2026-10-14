@@ -1,0 +1,46 @@
+next.config.ts
+  s_79e71990b30604::t_9bf6f12b24a1ca 6
+src/features/decide/model.ts
+  s_79e71990b30604::t_9bf6f12b24a1ca 21-29
+  s_79e71990b30604::t_b864a76ba877fb 1-20,30-94
+src/features/decide/store.ts
+  s_79e71990b30604::t_9bf6f12b24a1ca 9-10
+  s_79e71990b30604::t_b864a76ba877fb 1-8
+src/features/decide/actions.ts
+  s_79e71990b30604::t_b864a76ba877fb 1-25,29-74
+  s_79e71990b30604::t_9bf6f12b24a1ca 26-28
+src/features/decide/AutoRefresh.tsx
+  s_79e71990b30604::t_9bf6f12b24a1ca 1-19
+src/app/bestam/page.tsx
+  s_79e71990b30604::t_9bf6f12b24a1ca 1-28
+src/app/bestam/[id]/page.tsx
+  s_79e71990b30604::t_9bf6f12b24a1ca 1-148
+src/features/decide/voter.ts
+  s_79e71990b30604::t_b864a76ba877fb 1-5,7-22
+  s_79e71990b30604::t_9bf6f12b24a1ca 6
+src/features/decide/CreateRoomForm.tsx
+  s_79e71990b30604::t_9bf6f12b24a1ca 1-62
+src/features/decide/model.test.ts
+  s_79e71990b30604::t_b864a76ba877fb 1-68
+src/features/decide/Room.module.css
+  s_79e71990b30604::t_9bf6f12b24a1ca 1-97
+src/lib/areas.ts
+  s_79e71990b30604::t_9bf6f12b24a1ca 39-41,43-50
+  s_79e71990b30604::t_a021cdb5739dd0 42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5a72e2e25fe33eda2f352a0de5e2642cf9e54c40",
+  "prompts": {},
+  "sessions": {
+    "s_79e71990b30604": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4c2a93b2-cac7-4ba4-a9fc-56b6439b3b42",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Simon Aunér <simonauner@gmail.com>"
+    }
+  }
+}
