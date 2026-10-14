@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { bankHolidays, isBankDay } from '@/features/today/calendar';
+import { addDays, bankHolidays, isBankDay } from '@/features/today/calendar';
 import { paydayComment, paydayIn, paydayStatus } from './payday';
 
 describe('isBankDay', () => {
@@ -68,8 +68,35 @@ describe('paydayStatus', () => {
   });
 
   it('celebrates on payday', () => {
-    const status = paydayStatus({ year: 2026, month: 10, day: 23 });
+    const today = { year: 2026, month: 10, day: 23 };
+    const status = paydayStatus(today);
     expect(status.daysUntil).toBe(0);
-    expect(paydayComment(status)).toMatch(/idag/);
+    expect(paydayComment(status, today)).toMatch(/idag|lönedag|pengarna/i);
+  });
+});
+
+describe('paydayComment', () => {
+  const midMonth = paydayStatus({ year: 2026, month: 10, day: 14 });
+
+  it('keeps the same comment all day', () => {
+    const today = { year: 2026, month: 10, day: 14 };
+    expect(paydayComment(midMonth, today)).toBe(
+      paydayComment(midMonth, { ...today })
+    );
+  });
+
+  it('varies between days', () => {
+    const start = { year: 2026, month: 10, day: 1 };
+    const comments = new Set(
+      Array.from({ length: 30 }, (_, i) =>
+        paydayComment(midMonth, addDays(start, i))
+      )
+    );
+    expect(comments.size).toBeGreaterThan(1);
+  });
+
+  it('says how long ago payday was', () => {
+    const today = { year: 2026, month: 10, day: 26 };
+    expect(paydayComment(paydayStatus(today), today)).toMatch(/3 dagar/);
   });
 });
