@@ -63,6 +63,12 @@ export const areaGroups: AreaGroup[] = [
         question: 'ska jag skylla på?',
         description: 'Ursäkter för dig som kom sent. Igen.',
       },
+      {
+        href: '/svar',
+        emoji: '🎱',
+        question: 'ska jag göra, ja eller nej?',
+        description: 'En arg spåkula som säger som det är.',
+      },
     ],
   },
   {
