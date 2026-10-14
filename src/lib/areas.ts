@@ -24,6 +24,12 @@ export const areaGroups: AreaGroup[] = [
         description: 'Temadag, namnsdag och flaggdag. Med åsikter.',
       },
       {
+        href: '/fredag',
+        emoji: '🍻',
+        question: 'är det fredag snart?',
+        description: 'Nej. Med nedräkning till fredagsölen.',
+      },
+      {
         href: '/lon',
         emoji: '💸',
         question: 'när kommer lönen?',

@@ -9,7 +9,7 @@ import { PaydaySelect } from '@/features/payday/PaydaySelect';
 import { stockholmDate } from '@/features/today/calendar';
 import { formatDate } from '@/features/today/today';
 import { emojiIcon } from '@/lib/emojiIcon';
-import styles from './page.module.css';
+import styles from '@/components/BigPage.module.css';
 
 export const metadata: Metadata = {
   title: 'Vad i helvete, när kommer lönen?',

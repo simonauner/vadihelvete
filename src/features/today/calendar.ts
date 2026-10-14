@@ -138,3 +138,32 @@ export const isBankDay = (date: CalendarDate) => {
 
   return !bankHolidays(date.year).some((holiday) => isSameDate(holiday, date));
 };
+
+export type Clock = { weekday: number; secondsOfDay: number };
+
+/** Weekday (0 = Sunday) and seconds since midnight in Sweden. */
+export const stockholmClock = (now: Date = new Date()): Clock => {
+  const parts = Object.fromEntries(
+    new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'Europe/Stockholm',
+      weekday: 'short',
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+      hourCycle: 'h23',
+    })
+      .formatToParts(now)
+      .map(({ type, value }) => [type, value])
+  );
+  const weekday = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(
+    parts.weekday
+  );
+
+  return {
+    weekday,
+    secondsOfDay:
+      Number(parts.hour) * 3600 +
+      Number(parts.minute) * 60 +
+      Number(parts.second),
+  };
+};
