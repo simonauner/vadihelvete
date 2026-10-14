@@ -1,0 +1,49 @@
+src/features/chores/model.ts
+  s_79e71990b30604::t_33f7c2b3cf3a9b 1-99,105-113,115-117,119-134
+  s_79e71990b30604::t_ba5bf18540b833 100-104,114,118
+src/features/chores/model.test.ts
+  s_79e71990b30604::t_820510f7975108 56,59
+  s_79e71990b30604::t_33f7c2b3cf3a9b 1-55,57-58,60-76
+src/app/lista/page.tsx
+  s_79e71990b30604::t_ba5bf18540b833 1-29
+src/features/chores/actions.ts
+  s_79e71990b30604::t_0e55febd00977c 1-36,39-44,47-96
+  s_79e71990b30604::t_ba5bf18540b833 37-38,45-46
+src/lib/relativeTime.ts
+  s_79e71990b30604::t_ba5bf18540b833 1-18
+src/lib/store.ts
+  s_79e71990b30604::t_301c60bb7baeea 17,29,45
+  s_79e71990b30604::t_055aaeabd2270e 1-2,9-16,18-28,30-44,46-75,80-82
+  s_79e71990b30604::t_ba5bf18540b833 76-79
+  s_79e71990b30604::t_33f7c2b3cf3a9b 3-8
+src/lib/StoreMissing.tsx
+  s_79e71990b30604::t_ba5bf18540b833 1-11
+src/features/chores/Chores.module.css
+  s_79e71990b30604::t_0e55febd00977c 1-151
+src/components/ShareButton.tsx
+  s_79e71990b30604::t_ba5bf18540b833 8,11-15,38
+src/features/chores/CreateHouseholdForm.tsx
+  s_79e71990b30604::t_0e55febd00977c 1-52
+src/app/lista/[id]/page.tsx
+  s_79e71990b30604::t_ba5bf18540b833 1-179
+src/features/chores/store.ts
+  s_79e71990b30604::t_0e55febd00977c 1-10
+src/app/not-found.tsx
+  s_79e71990b30604::t_ba5bf18540b833 1-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f8b085a5d8f1198d00ae732861b53fcdcf06f600",
+  "prompts": {},
+  "sessions": {
+    "s_79e71990b30604": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4c2a93b2-cac7-4ba4-a9fc-56b6439b3b42",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Simon Aunér <simonauner@gmail.com>"
+    }
+  }
+}
