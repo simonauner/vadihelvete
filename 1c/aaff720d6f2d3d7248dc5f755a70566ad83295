@@ -1,0 +1,39 @@
+src/features/excuse/excuses.test.ts
+  s_79e71990b30604::t_a89154be633d72 1-23
+src/lib/areas.ts
+  s_79e71990b30604::t_a89154be633d72 59-66
+src/features/excuse/ExcusePage.tsx
+  s_79e71990b30604::t_a89154be633d72 1-18,27-35
+  s_79e71990b30604::t_5a99f8a477eb7f 19-26
+src/features/suggestions/SuggestionPage.module.css
+  s_79e71990b30604::t_a89154be633d72 21-25
+src/app/ursakt/[kod]/page.tsx
+  s_79e71990b30604::t_a89154be633d72 1-28
+src/features/excuse/excuses.ts
+  s_79e71990b30604::t_a89154be633d72 1-41,43-87
+  s_79e71990b30604::t_aa26b08a9a45a9 42
+src/app/ursakt/[kod]/opengraph-image.tsx
+  s_79e71990b30604::t_a89154be633d72 1-20
+src/app/ursakt/page.tsx
+  s_79e71990b30604::t_a89154be633d72 1-19
+next.config.ts
+  s_79e71990b30604::t_a89154be633d72 7
+src/lib/og.tsx
+  s_79e71990b30604::t_9523e5683afe5d 28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1caaff720d6f2d3d7248dc5f755a70566ad83295",
+  "prompts": {},
+  "sessions": {
+    "s_79e71990b30604": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4c2a93b2-cac7-4ba4-a9fc-56b6439b3b42",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Simon Aunér <simonauner@gmail.com>"
+    }
+  }
+}
