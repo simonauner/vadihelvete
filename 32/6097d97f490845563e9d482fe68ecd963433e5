@@ -1,0 +1,48 @@
+src/components/AreaPage.tsx
+  s_79e71990b30604::t_9caae49c36f219 1-21
+src/lib/rateLimit.ts
+  s_79e71990b30604::t_fdae4fc21c9184 1-48
+src/app/oversatt/page.tsx
+  s_79e71990b30604::t_9caae49c36f219 1-22
+.env.example
+  s_79e71990b30604::t_33a4ed327bdb1c 1-7
+next.config.ts
+  s_79e71990b30604::t_33a4ed327bdb1c 3-6,9-15
+src/lib/redis.ts
+  s_79e71990b30604::t_fdae4fc21c9184 1-11
+src/features/translate/actions.ts
+  s_79e71990b30604::t_9caae49c36f219 50
+  s_79e71990b30604::t_fdae4fc21c9184 1-21,23-49,51-77,79-99
+  s_79e71990b30604::t_35980963b1b33a 22,78
+src/features/translate/Translator.tsx
+  s_79e71990b30604::t_9caae49c36f219 1-21,23-71,73-83
+  s_79e71990b30604::t_cdf600e11438a8 22,72
+src/features/translate/prompt.ts
+  s_79e71990b30604::t_fdae4fc21c9184 1-18
+src/components/AreaPage.module.css
+  s_79e71990b30604::t_9caae49c36f219 1-19
+src/features/translate/Translator.module.css
+  s_79e71990b30604::t_9caae49c36f219 1-68
+src/lib/areas.ts
+  s_79e71990b30604::t_33a4ed327bdb1c 21-26
+package.json
+  s_79e71990b30604::t_92d2dd6644779b 16-18
+package-lock.json
+  s_79e71990b30604::t_057d39b53c3c1b 9-11,32-53,246-254,1415-1423,1738-1743,2635-2667,4368-4373,5304-5316,6781-6790,7053-7058,7227-7232,7690
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "326097d97f490845563e9d482fe68ecd963433e5",
+  "prompts": {},
+  "sessions": {
+    "s_79e71990b30604": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4c2a93b2-cac7-4ba4-a9fc-56b6439b3b42",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Simon Aunér <simonauner@gmail.com>"
+    }
+  }
+}
