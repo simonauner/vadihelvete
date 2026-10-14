@@ -6,9 +6,9 @@ type HeadProps = {
 };
 
 export const Head: FC<HeadProps> = ({ favicon = '🎯' }) => {
-  const metaTitle = 'Vad i helevete ska jag göra nu?';
+  const metaTitle = 'Vad i helvete ska jag göra nu?';
   const metaDescription = 'Vet du inte riktigt vad du ska göra med ditt liv?';
-  const metaUrl = 'https://vadihelveteskajaggöra.nu';
+  const metaUrl = 'https://vadihelvete.nu';
 
   return (
     <NextHead>
@@ -21,7 +21,7 @@ export const Head: FC<HeadProps> = ({ favicon = '🎯' }) => {
       <meta property="og:description" content={metaDescription} />
 
       {/* twitter */}
-      <meta name="twitter:domain" content="vadihelveteskajaggöra.nu" />
+      <meta name="twitter:domain" content="vadihelvete.nu" />
       <meta name="twitter:title" content={metaTitle} />
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:url" content={metaUrl} />

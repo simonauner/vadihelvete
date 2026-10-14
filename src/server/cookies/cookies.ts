@@ -41,11 +41,17 @@ export const getSeenSuggestions = (
 ): SeenSuggestions => {
   if (!currentCookies?.data) return {};
 
-  const json = JSON.parse(currentCookies?.data) as CookieData;
+  let json: CookieData;
+  try {
+    json = JSON.parse(currentCookies.data) as CookieData;
+  } catch {
+    logger.debug('could not parse cookie data');
+    return {};
+  }
 
   if (hasSuggestionsExpired(json.timeStamp)) {
     return {};
   }
 
-  return json?.seenSuggestions;
+  return json?.seenSuggestions ?? {};
 };

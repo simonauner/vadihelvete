@@ -37,7 +37,7 @@ const collection: Suggestions = {
 export const getSuggestion = (
   category: SuggestionCategories = 'home',
   seenSuggestions: SeenSuggestions
-): [suggestion: string, seenSuggestions: SeenSuggestions] => {
+): [suggestion: string | undefined, seenSuggestions: SeenSuggestions] => {
   if (seenSuggestions[category]?.length) {
     logger.debug('user has seen some suggestions', seenSuggestions[category]);
   } else {
@@ -54,7 +54,11 @@ export const getSuggestion = (
     logger.debug('user has these remaining suggestions', remainingSuggestions);
   }
 
-  const index = Math.round(Math.random() * (remainingSuggestions.length - 1));
+  if (!remainingSuggestions.length) {
+    return [undefined, seenSuggestions];
+  }
+
+  const index = Math.floor(Math.random() * remainingSuggestions.length);
   const suggestion = remainingSuggestions[index];
 
   const originalIndex = collection[category].findIndex(

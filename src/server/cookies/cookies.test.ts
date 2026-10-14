@@ -36,3 +36,11 @@ describe('getSeenSuggestions', () => {
     expect(result.home).toBeUndefined();
   });
 });
+
+describe('getSeenSuggestions with broken data', () => {
+  it('should ignore a malformed cookie', () => {
+    const result = getSeenSuggestions({ data: 'not json' });
+
+    expect(result).toEqual({});
+  });
+});
