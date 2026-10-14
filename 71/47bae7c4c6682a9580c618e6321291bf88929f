@@ -1,0 +1,50 @@
+src/app/[kategori]/page.tsx
+  s_79e71990b30604::t_fe93e3f8434f52 1-22
+  s_79e71990b30604::t_73bc998dc697d6 24
+src/app/[kategori]/params.ts
+  s_79e71990b30604::t_fe93e3f8434f52 1-13
+src/app/opengraph-image.tsx
+  s_79e71990b30604::t_fe93e3f8434f52 1-15
+src/lib/og.tsx
+  s_79e71990b30604::t_fe93e3f8434f52 1-30,39-40,44-55,73-77,80-84,86,88-94
+  s_79e71990b30604::t_08efba23f416df 56-72
+  s_79e71990b30604::t_5ac2092a89752d 31-33,36-38
+  s_79e71990b30604::t_871c3440c4d520 41-43
+  s_79e71990b30604::t_b9656f6a41caa6 78-79
+  s_79e71990b30604::t_58aaceff7b53e8 85
+  s_79e71990b30604::t_2f85406ad25021 87
+  s_79e71990b30604::t_7b2188ac340339 34-35
+src/features/suggestions/suggestions.test.ts
+  s_79e71990b30604::t_fe93e3f8434f52 60-75
+  s_79e71990b30604::t_2c15c445693f6c 6
+src/app/[kategori]/[nr]/opengraph-image.tsx
+  s_79e71990b30604::t_fe93e3f8434f52 1-30
+src/components/ShareButton.tsx
+  s_79e71990b30604::t_fe93e3f8434f52 1-35
+  s_79e71990b30604::t_ce396de7716e57 36
+src/features/suggestions/suggestions.ts
+  s_79e71990b30604::t_fe93e3f8434f52 3-10,88-100
+src/app/[kategori]/[nr]/page.tsx
+  s_79e71990b30604::t_fe93e3f8434f52 1-53
+  s_79e71990b30604::t_b19cf443eb921e 54-55,57
+src/features/suggestions/SuggestionPage.module.css
+  s_79e71990b30604::t_d8751898c4ffe1 24-36
+src/features/suggestions/SuggestionPage.tsx
+  s_79e71990b30604::t_f4a7a173334fbc 1,26-36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7147bae7c4c6682a9580c618e6321291bf88929f",
+  "prompts": {},
+  "sessions": {
+    "s_79e71990b30604": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4c2a93b2-cac7-4ba4-a9fc-56b6439b3b42",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Simon Aunér <simonauner@gmail.com>"
+    }
+  }
+}
