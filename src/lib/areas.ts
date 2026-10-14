@@ -19,6 +19,12 @@ export const areas: Area[] = [
     description: 'För den som har tråkigt på jobbet.',
   },
   {
+    href: '/ha-pa-mig',
+    emoji: '🧥',
+    question: 'ska jag ha på mig?',
+    description: 'SMHI:s prognos, fast med en åsikt.',
+  },
+  {
     href: '/oversatt',
     emoji: '🗯️',
     question: 'betyder det?',
