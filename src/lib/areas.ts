@@ -56,7 +56,14 @@ export const areaGroups: AreaGroup[] = [
   },
   {
     title: 'Hjälp mig',
-    areas: [],
+    areas: [
+      {
+        href: '/ursakt',
+        emoji: '🙄',
+        question: 'ska jag skylla på?',
+        description: 'Ursäkter för dig som kom sent. Igen.',
+      },
+    ],
   },
   {
     title: 'Tillsammans',
