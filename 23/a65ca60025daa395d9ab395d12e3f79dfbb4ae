@@ -1,0 +1,23 @@
+src/app/page.module.css
+  s_79e71990b30604::t_e568ccffc9e101 18-31
+src/app/page.tsx
+  s_79e71990b30604::t_e568ccffc9e101 2,11-29
+src/lib/areas.ts
+  s_79e71990b30604::t_e568ccffc9e101 8-10,12-26,29-43,46-47,50-64
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "23a65ca60025daa395d9ab395d12e3f79dfbb4ae",
+  "prompts": {},
+  "sessions": {
+    "s_79e71990b30604": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4c2a93b2-cac7-4ba4-a9fc-56b6439b3b42",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Simon Aunér <simonauner@gmail.com>"
+    }
+  }
+}
