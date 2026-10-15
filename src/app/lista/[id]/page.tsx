@@ -172,6 +172,7 @@ const HouseholdPage = async ({ params }: Props) => {
           path={`/lista/${id}`}
           text={`Här är sysslolistan för ${household.name}. Gör din del för i helvete.`}
           label="Dela listan med hushållet"
+          qr
         />
       </div>
     </AreaPage>

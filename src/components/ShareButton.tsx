@@ -8,12 +8,15 @@ type ShareButtonProps = {
   path: string;
   text: string;
   label?: string;
+  /** Also offer a QR code, for when the people you share with are in the room. */
+  qr?: boolean;
 };
 
 export const ShareButton = ({
   path,
   text,
   label = 'Skicka till någon som behöver det',
+  qr = false,
 }: ShareButtonProps) => {
   const [copied, setCopied] = useState(false);
   const [qrUrl, setQrUrl] = useState<string>();
@@ -50,31 +53,35 @@ export const ShareButton = ({
       <button type="button" className="button" onClick={share}>
         {copied ? 'Länken är kopierad!' : label}
       </button>
-      <button type="button" className="button" onClick={showQr}>
-        Visa QR-kod
-      </button>
-      <dialog
-        ref={dialogRef}
-        className={styles.dialog}
-        aria-labelledby={titleId}
-        // A click on the backdrop lands on the dialog element itself.
-        onClick={(event) => event.target === event.currentTarget && close()}
-      >
-        <div className={styles.content}>
-          <h2 id={titleId} className={styles.title}>
-            Scanna för i helvete
-          </h2>
-          {qrUrl && (
-            <>
-              <QrCode value={qrUrl} className={styles.qr} />
-              <p className={styles.url}>{qrUrl}</p>
-            </>
-          )}
-          <button type="button" className="button" onClick={close}>
-            Stäng
+      {qr && (
+        <>
+          <button type="button" className="button" onClick={showQr}>
+            Visa QR-kod
           </button>
-        </div>
-      </dialog>
+          <dialog
+            ref={dialogRef}
+            className={styles.dialog}
+            aria-labelledby={titleId}
+            // A click on the backdrop lands on the dialog element itself.
+            onClick={(event) => event.target === event.currentTarget && close()}
+          >
+            <div className={styles.content}>
+              <h2 id={titleId} className={styles.title}>
+                Scanna för i helvete
+              </h2>
+              {qrUrl && (
+                <>
+                  <QrCode value={qrUrl} className={styles.qr} />
+                  <p className={styles.url}>{qrUrl}</p>
+                </>
+              )}
+              <button type="button" className="button" onClick={close}>
+                Stäng
+              </button>
+            </div>
+          </dialog>
+        </>
+      )}
     </>
   );
 };
