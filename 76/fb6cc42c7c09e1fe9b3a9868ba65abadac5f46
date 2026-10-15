@@ -1,0 +1,52 @@
+src/features/chores/CreateHouseholdForm.tsx
+  s_006d129ac07109::t_54ec8f621e6183 3,6-7,9-19,26-40,46,56,66-67,71-73,75-121
+  s_006d129ac07109::t_d2289408957dcd 41-45,74
+src/app/lista/[id]/page.tsx
+  s_006d129ac07109::t_e698024274218b 2,9-10,13-14,16,18-25,32-35,39,44-125,127-132,139-153,164-193,195-207,209,214-218,220,222-228,237-282,326-334,336-339
+  s_006d129ac07109::t_515ca521a5cfe5 126,213
+  s_006d129ac07109::t_d2289408957dcd 335
+  s_006d129ac07109::t_3b81cef0c00284 194
+  s_006d129ac07109::t_c2d7df00c8200e 340
+src/features/chores/Confetti.tsx
+  s_006d129ac07109::t_3d5cedeb322ad9 14,58-67,69,74-77
+  s_006d129ac07109::t_d2289408957dcd 5-12,86-91
+  s_006d129ac07109::t_d552949a9cd954 1-4,13,15-57,68,70-73,78-85,92-117
+src/app/lista/page.tsx
+  s_006d129ac07109::t_2d1ffbc4412e1f 22,24-29
+src/features/chores/model.ts
+  s_006d129ac07109::t_f3b90feef3ec02 1-8,12-27,31,36-45,49-55,64-65,71-152,159,165-166,168-172,174-224,226-227,230-231,235,237,240-244,251-278,280,284-299,304,307-329,331-339,342-346,351-359,368-376
+  s_006d129ac07109::t_d2289408957dcd 66-70
+  s_006d129ac07109::t_3d4a4a39399548 245-248,360-364
+src/features/chores/actions.ts
+  s_006d129ac07109::t_64ecb6437a04dd 10,13-14,17-19,21,25-26,38-45,51,72,93-103,105-106,112,116-121,126
+  s_006d129ac07109::t_fb7e561654e7a2 46-50
+src/app/globals.css
+  s_006d129ac07109::t_515ca521a5cfe5 9-10,24-25
+src/features/chores/WhoSelect.tsx
+  s_006d129ac07109::t_034f8c8ec03093 1-20
+src/features/chores/Chores.module.css
+  s_006d129ac07109::t_515ca521a5cfe5 152-180,183-390
+  s_006d129ac07109::t_be3b297c4d0718 181-182
+  s_006d129ac07109::t_4f953bcd1044ee 391-397
+src/features/chores/model.test.ts
+  s_006d129ac07109::t_7cab61de1f38cb 5,7-11,13-16,19-26,30-37,41-48,50-59,61,67-80,82-83,85-94,97-104,106-112,115-128,130-132,134-135,141-164,168-206,209-216
+  s_006d129ac07109::t_d2289408957dcd 136-140
+src/features/chores/store.ts
+  s_006d129ac07109::t_e67d12df6d7784 2,7-10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "76fb6cc42c7c09e1fe9b3a9868ba65abadac5f46",
+  "prompts": {},
+  "sessions": {
+    "s_006d129ac07109": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dde36f09-7b1c-46cf-8e9c-608baf7a75d1",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Simon Aunér <simonauner@gmail.com>"
+    }
+  }
+}
