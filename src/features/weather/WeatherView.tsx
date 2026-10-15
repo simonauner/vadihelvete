@@ -17,6 +17,9 @@ type WeatherViewProps = {
 /** The forecast for the visitor's own position, once we have one. */
 type Here = { advice: WeatherAdvice; place: string | null };
 
+/** Select value for "your position", never a city slug. */
+const HERE = 'har';
+
 const locate = () =>
   new Promise<GeolocationPosition>((resolve, reject) =>
     navigator.geolocation.getCurrentPosition(resolve, reject, {
@@ -31,6 +34,7 @@ export const WeatherView = ({
   initialAdvice,
 }: WeatherViewProps) => {
   const [here, setHere] = useState<Here | null>(null);
+  const [slug, setSlug] = useState(city.slug);
   const [locating, setLocating] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const formRef = useRef<HTMLFormElement>(null);
@@ -83,13 +87,25 @@ export const WeatherView = ({
             id="stad"
             name="stad"
             className="input"
-            defaultValue={city.slug}
-            onChange={() => {
+            // While your position is shown, the list says so instead of
+            // still claiming the city from before.
+            value={here ? HERE : slug}
+            onChange={(event) => {
+              const next = event.target.value;
+              if (next === HERE) return;
+              setSlug(next);
               setHere(null);
               setError(null);
-              formRef.current?.requestSubmit();
+              // The page already has this city's forecast, so going back to
+              // it needs no reload.
+              if (next !== city.slug) formRef.current?.requestSubmit();
             }}
           >
+            {here && (
+              <option value={HERE}>
+                📍 Där du är{here.place && ` (${here.place})`}
+              </option>
+            )}
             {cities.map((option) => (
               <option key={option.slug} value={option.slug}>
                 {option.name}
@@ -106,9 +122,10 @@ export const WeatherView = ({
         <div className={styles.hereRow}>
           <button
             type="button"
-            className="button"
+            className={here ? 'button button-primary' : 'button'}
             onClick={showMyLocation}
             aria-busy={locating}
+            aria-pressed={here !== null}
           >
             📍 Där jag är
           </button>
@@ -137,7 +154,8 @@ export const WeatherView = ({
           <AdviceCard
             key={`here:${here.place}`}
             advice={here.advice}
-            place={here.place ?? 'Där du är'}
+            place={here.place}
+            isHere
           />
         ) : initialAdvice ? (
           <AdviceCard
