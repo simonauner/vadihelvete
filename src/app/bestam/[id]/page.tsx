@@ -119,6 +119,7 @@ const RoomPage = async ({ params }: Props) => {
           path={`/bestam/${id}`}
           text={`${room.question} Rösta nu för i helvete.`}
           label="Skicka länken till gänget"
+          qr
         />
       </div>
 
