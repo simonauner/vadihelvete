@@ -19,9 +19,14 @@ const ListaPage = () => {
   return (
     <AreaPage
       title="Vem i helvete ska göra vad?"
-      intro="Skapa en sysslolista för hushållet. Den håller koll på vems tur det är och skäller ut rätt person. Alla som har länken kan se och ändra listan."
+      intro="Skapa en sysslolista för hushållet. Vissa saker ska alla göra, vissa har någon ansvar för och resten lottas ut. Alla som har länken kan se, bocka av och vägra."
     >
-      <CreateHouseholdForm defaultChores={suggestions.hemma.join('\n')} />
+      <CreateHouseholdForm
+        defaultChores={suggestions.hemma.map((text) => ({
+          text,
+          who: text === 'städa ditt rum' ? 'alla' : 'slumpa',
+        }))}
+      />
     </AreaPage>
   );
 };

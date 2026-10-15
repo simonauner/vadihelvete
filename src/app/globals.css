@@ -6,6 +6,8 @@
   --border: #ecd9cc;
   --accent: #d92f1a;
   --accent-fg: #ffffff;
+  --done: #1f7a45;
+  --done-fg: #ffffff;
   --radius: 14px;
   color-scheme: light dark;
 }
@@ -19,6 +21,8 @@
     --border: #3a2820;
     --accent: #ff5c3d;
     --accent-fg: #150d0b;
+    --done: #4cc982;
+    --done-fg: #0d1f14;
   }
 }
 
