@@ -1,0 +1,41 @@
+.dialog {
+  width: min(22rem, calc(100vw - 2rem));
+  padding: 0;
+  border: 2px solid var(--fg);
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--fg);
+  box-shadow: 6px 6px 0 var(--fg);
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.dialog::backdrop {
+  background: rgb(0 0 0 / 0.6);
+}
+
+.title {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+
+.qr {
+  display: block;
+  width: 100%;
+  border-radius: calc(var(--radius) / 2);
+}
+
+.url {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+  overflow-wrap: anywhere;
+}

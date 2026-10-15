@@ -338,11 +338,14 @@ const HouseholdPage = async ({ params, searchParams }: Props) => {
         </section>
       )}
 
-      <ShareButton
-        path={`/lista/${id}`}
-        text={`Här är sysslolistan för ${household.name}. Gör din del för i helvete.`}
-        label="Dela listan med hushållet"
-      />
+      <div className={styles.share}>
+        <ShareButton
+          path={`/lista/${id}`}
+          text={`Här är sysslolistan för ${household.name}. Gör din del för i helvete.`}
+          label="Dela listan med hushållet"
+          qr
+        />
+      </div>
     </AreaPage>
   );
 };
