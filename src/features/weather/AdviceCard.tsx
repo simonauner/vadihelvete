@@ -8,14 +8,19 @@ const formatDegrees = (n: number) => `${degrees.format(Math.round(n) + 0)}°`;
 
 type AdviceCardProps = {
   advice: WeatherAdvice;
-  place: string;
+  /** Null when we know where you are but not what the place is called. */
+  place: string | null;
+  isHere?: boolean;
 };
 
-export const AdviceCard = ({ advice, place }: AdviceCardProps) => {
+export const AdviceCard = ({ advice, place, isHere }: AdviceCardProps) => {
   const { summary } = advice;
 
   return (
     <section className={`${styles.card} ${styles.fadeUp}`}>
+      <p className={styles.place}>
+        {isHere ? <>📍 Där du är{place && <>: {place}</>}</> : place}
+      </p>
       <p className={styles.headline}>{advice.headline}</p>
       <ul className={styles.extras}>
         {advice.extras.map((extra) => (
@@ -23,7 +28,7 @@ export const AdviceCard = ({ advice, place }: AdviceCardProps) => {
         ))}
       </ul>
       <p className={styles.summary}>
-        {place} just nu: {formatDegrees(summary.now)}
+        {place ?? 'Där du är'} just nu: {formatDegrees(summary.now)}
         {Math.round(summary.feelsLike) !== Math.round(summary.now) &&
           ` (känns som ${formatDegrees(summary.feelsLike)})`}
         . Kommande {HOURS_AHEAD} timmarna: {formatDegrees(summary.min)} till{' '}
