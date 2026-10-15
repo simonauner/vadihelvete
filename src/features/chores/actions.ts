@@ -7,15 +7,22 @@ import { isId, newId, parseLines, parseText } from '@/lib/store';
 import {
   addChore,
   addMember,
-  completeChore,
+  completeTask,
   createHousehold,
   LIMITS,
-  passChore,
+  parseWho,
+  refuseTask,
   removeChore,
   removeMember,
+  resetHousehold,
+  undoTask,
+  type ChoreInput,
   type Household,
+  type Make,
 } from './model';
 import { loadHousehold, saveHousehold } from './store';
+
+const make: Make = { id: () => newId(6), random: Math.random };
 
 export type CreateState = { error?: string };
 
@@ -28,10 +35,20 @@ export const createHouseholdAction = async (
     max: LIMITS.members,
     maxLength: LIMITS.memberName,
   });
-  const chores = parseLines(formData.get('chores'), {
-    max: LIMITS.chores,
-    maxLength: LIMITS.choreText,
-  });
+  const whos = formData.getAll('who');
+  const seen = new Set<string>();
+  const chores: ChoreInput[] = formData
+    .getAll('chore')
+    .map((text, index) => ({
+      text: parseText(text, LIMITS.choreText),
+      ...parseWho(whos[index], members),
+    }))
+    .filter(({ text }) => {
+      if (!text || seen.has(text)) return false;
+      seen.add(text);
+      return true;
+    })
+    .slice(0, LIMITS.chores);
 
   if (!members.length) return { error: 'Någon måste ju för i helvete bo där.' };
   if (!chores.length)
@@ -52,7 +69,7 @@ export const createHouseholdAction = async (
       name,
       members,
       chores,
-      choreId: () => newId(6),
+      make,
       now: Date.now(),
     })
   );
@@ -73,24 +90,38 @@ const update = async (
   revalidatePath(`/lista/${id}`);
 };
 
-export const completeChoreAction = async (id: unknown, choreId: unknown) =>
-  update(id, (h) => completeChore(h, String(choreId), Date.now()));
+export const completeTaskAction = async (id: unknown, taskId: unknown) =>
+  update(id, (h) => completeTask(h, String(taskId), Date.now()));
 
-export const passChoreAction = async (id: unknown, choreId: unknown) =>
-  update(id, (h) => passChore(h, String(choreId)));
+export const undoTaskAction = async (id: unknown, taskId: unknown) =>
+  update(id, (h) => undoTask(h, String(taskId)));
+
+export const refuseTaskAction = async (
+  id: unknown,
+  taskId: unknown,
+  by: unknown
+) => update(id, (h) => refuseTask(h, String(taskId), String(by), make));
+
+export const resetAction = async (id: unknown) =>
+  update(id, (h) => resetHousehold(h, make));
 
 export const removeChoreAction = async (id: unknown, choreId: unknown) =>
   update(id, (h) => removeChore(h, String(choreId)));
 
 export const removeMemberAction = async (id: unknown, name: unknown) =>
-  update(id, (h) => removeMember(h, String(name)));
+  update(id, (h) => removeMember(h, String(name), make));
 
 export const addChoreAction = async (id: unknown, formData: FormData) => {
   const text = parseText(formData.get('text'), LIMITS.choreText);
-  if (text) await update(id, (h) => addChore(h, text, newId(6)));
+  const who = formData.get('who');
+  if (text) {
+    await update(id, (h) =>
+      addChore(h, { text, ...parseWho(who, h.members) }, make)
+    );
+  }
 };
 
 export const addMemberAction = async (id: unknown, formData: FormData) => {
   const name = parseText(formData.get('name'), LIMITS.memberName);
-  if (name) await update(id, (h) => addMember(h, name));
+  if (name) await update(id, (h) => addMember(h, name, make));
 };
