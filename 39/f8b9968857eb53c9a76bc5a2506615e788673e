@@ -1,0 +1,21 @@
+src/features/excuse/excuses.ts
+  s_d88ad01cbf5187::t_48d4a51b1836ff 65-94
+  s_d88ad01cbf5187::t_4bcd9a0301296f 14-31
+  s_d88ad01cbf5187::t_de40f27ca65f49 110-127
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "39f8b9968857eb53c9a76bc5a2506615e788673e",
+  "prompts": {},
+  "sessions": {
+    "s_d88ad01cbf5187": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a5f21e2d-9938-4884-8e91-f30a552830ff",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Simon Aunér <simonauner@gmail.com>"
+    }
+  }
+}
